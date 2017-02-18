@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+from feedback import views as feedviews
 
 urlpatterns = [
+    url(r'$',feedviews.feedback,name='feedback'),
     url(r'^admin/', include(admin.site.urls)),
 ]
